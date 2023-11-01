@@ -1,9 +1,9 @@
+
 .header img {
     width: 100px;
     height: 100px;
     padding-left: 5%;
     padding-top: -1%;
-    background-color: whitesmoke;
 }
 
 @font-face {
@@ -13,7 +13,8 @@
 
 .header {
     width: 100%;
-    height: 10%;
+    height: 15%;
+    background-color: whitesmoke;
 }
 
 ul {
@@ -23,8 +24,9 @@ ul {
 .header-options ul {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     padding-right: 20%;
-    margin-top: -1%;
+    margin-top: -3%;
     font-family: 'Steelfish', sans-serif;
     font-size: 30px;
 }
