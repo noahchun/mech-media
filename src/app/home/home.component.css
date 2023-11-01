@@ -1,0 +1,20 @@
+.home-search {
+    font-family: 'Steelfish', sans-serif;
+    font-size: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search-bar-container {
+    font-family: 'Steelfish', sans-serif;
+}
+
+.search-bar {
+    border-radius: 40px;
+}
+
+@font-face {
+    font-family: 'Steelfish';
+    src: url('../../assets/fonts/steelfish-bd.otf') format('opentype');
+}
