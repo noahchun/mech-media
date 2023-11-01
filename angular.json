@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "mech-mania": {
+    "mech-media": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/mech-mania",
+            "outputPath": "dist/mech-media",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -60,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "mech-mania:build:production"
+              "browserTarget": "mech-media:build:production"
             },
             "development": {
-              "browserTarget": "mech-mania:build:development"
+              "browserTarget": "mech-media:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +71,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "mech-mania:build"
+            "browserTarget": "mech-media:build"
           }
         },
         "test": {
