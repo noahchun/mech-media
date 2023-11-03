@@ -18,3 +18,14 @@
     font-family: 'Steelfish';
     src: url('../../assets/fonts/steelfish-bd.otf') format('opentype');
 }
+
+.franchise-logo {
+    width: 200px;
+    length: 250px;
+}
+
+.franchise-selection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10%;
+}
