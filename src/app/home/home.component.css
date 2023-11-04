@@ -16,16 +16,21 @@
 
 @font-face {
     font-family: 'Steelfish';
-    src: url('../../assets/fonts/steelfish-bd.otf') format('opentype');
-}
-
-.franchise-logo {
-    width: 200px;
-    length: 250px;
+    src: url('../../assets/fonts/steelfish-bd.otf') format('truetype');
 }
 
 .franchise-selection {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 10%;
+}
+
+.franchise-logo {
+    width: 200px;
+    transition: transform 0.5s;
+    transform: scale(1);
+}
+
+.franchise-logo:hover {
+    transform: scale(1.3);
 }
