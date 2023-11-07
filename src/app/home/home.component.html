@@ -3,7 +3,7 @@
     <div class="search-bar-container">
         <input type="text" class="search-bar" placeholder="...">
     </div>
-    <app-housing-location></app-housing-location>
+    <app-housing-location [housingLocation]="housingLocation"></app-housing-location> <!-- Hey, housing-location.component, use housingLocation that's in my ts file. Use it as your @Input value.-->
     <div class="franchise-selection">
         <img src="../../assets/images/titanfall2logo.png" class="franchise-logo">
         <img src="../../assets//images/pacificrimlogo.png" class="franchise-logo">
