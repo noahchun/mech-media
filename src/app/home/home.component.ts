@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HousingLocationComponent } from '../housing-location/housing-location.component';
 import { HousingLocation } from '../housinglocation';
+import { HousingService } from '../housing.service';
 
 @Component({
   selector: 'app-home',
@@ -40,26 +41,10 @@ export class HomeComponent {
   //   }
   // ];
 
-  housingLocationList: HousingLocation[] = [
-    {
-      id: 0,
-      name: 'Titanfall 2',
-      photo: `../../assets/images/titanfall2logo.png`
-    },
-    {
-      id: 1,
-      name: 'Pacific Rim',
-      photo: `../../assets//images/pacificrimlogo.png`
-    },
-    {
-      id: 2,
-      name: 'Code Geass',
-      photo: `../../assets//images/codegeasslogo.png`
-    },
-    {
-      id: 3,
-      name: 'Mobile Suit Gundam: Iron-Blooded Orphans',
-      photo: `../../assets/images/ironbloodedlogo.png`,
-    },
-  ];
+  housingLocationList: HousingLocation[] = [];
+  housingService: HousingService = inject(HousingService);
+
+  constructor() {
+    this.housingLocationList = this.housingService.getAllHousingLocations();       // pulls data from HousingService via dependency injection
+  }
 }

@@ -6,7 +6,7 @@
     <div class="franchise-selection">
         <app-housing-location class="franchise-logo"
             *ngFor="let housingLocation of housingLocationList"
-            [housingLocation]="housingLocation">
+            [housingLocation]="housingLocation"> <!-- binding housingLocation that is declared a line above to housingLocation in housing-location.component input-->
         </app-housing-location> <!-- Hey, housing-location.component, use housingLocation that's in my ts file. Use it as your @Input value.-->
     </div>
     <!-- <div class="franchise-selection">
