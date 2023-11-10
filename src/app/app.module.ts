@@ -5,18 +5,24 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { HousingLocationComponent } from './housing-location/housing-location.component';
+import { DetailsComponent } from './details/details.component';
+import routeConfig from './routes';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   // for components
   declarations: [
     AppComponent,
     HomeComponent,
+    DetailsComponent,
   ],
   // for modules
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HousingLocationComponent
+    HousingLocationComponent,
+    BrowserModule,
+    RouterModule.forRoot(routeConfig),
   ],
   providers: [],
   bootstrap: [AppComponent]
