@@ -1,3 +1,16 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mirrored-image {
+    transform: scaleX(-1);
+}
 
 .header img {
     width: 100px;
