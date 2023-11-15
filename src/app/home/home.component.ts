@@ -13,8 +13,8 @@ import { HousingService } from '../housing.service';
           <div class="home-search">
             <p>Welcome to Mech Media! Browse our catalog of franchises.</p>
             <div class="search-bar-container">
-                <input type="text" class="search-bar" placeholder="...">
-          </div>
+              <input type="text" class="search-bar" placeholder="...">
+            </div>
           <div class="franchise-selection">
               <app-housing-location class="franchise-logo"
                   *ngFor="let housingLocation of housingLocationList"
@@ -26,35 +26,6 @@ import { HousingService } from '../housing.service';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {
-
-  // housingLocation: HousingLocation = {
-  //   id: 9999,
-  //   name: 'Test Home',
-  //   city: 'Test city',
-  //   state: 'ST',
-  //   photo: `${this.baseUrl}/example-house.jpg`,
-  //   availableUnits: 99,
-  //   wifi: true,
-  //   laundry: false,
-  // };
-
-  // franchiseList: FranchiseDetails[] = [
-  //   {
-  //     id: 0,
-  //     name: 'Titanfall 2',
-  //     photo: '../../assets/images/titanfall2logo.png'
-  //   },
-  //   {
-  //     id: 1,
-  //     name: 'Pacific Rim',
-  //     photo: '../../assets//images/pacificrimlogo.png'
-  //   },
-  //   {
-  //     id: 2,
-  //     name: 'Iron-Blooded Orphans',
-  //     photo: '../../assets/images/ironbloodedlogo.png'
-  //   }
-  // ];
 
   housingLocationList: HousingLocation[] = [];
   housingService: HousingService = inject(HousingService);
