@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HousingLocation } from './housinglocation';
+import { CommonModule } from '@angular/common';
 
 @Injectable({
   providedIn: 'root'

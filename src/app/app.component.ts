@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { HomeComponent } from './home/home.component';
 import { Router, RouterModule, RouterOutlet, RouterLink } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { DetailsComponent } from './details/details.component';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +10,8 @@ import { Router, RouterModule, RouterOutlet, RouterLink } from '@angular/router'
   imports: [
     HomeComponent,
     RouterOutlet,
-    RouterLink
+    RouterLink,
+    CommonModule
   ],
   template: `
   <main>
@@ -21,7 +24,7 @@ import { Router, RouterModule, RouterOutlet, RouterLink } from '@angular/router'
         </ul>
       </div>
     </div>
-    </a>
+  </a>
     <div class="image-container">
       <img src="./assets/images/circuitboard.svg">
         <section class="content">
