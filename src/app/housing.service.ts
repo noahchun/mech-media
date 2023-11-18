@@ -15,24 +15,28 @@ export class HousingService {
               `../../assets/images/icons/monarchicon.png`, `../../assets/images/icons/northstaricon.png`,
               `../../assets/images/icons/roninicon.png`, `../../assets/images/icons/scorchicon.png`,
               `../../assets/images/icons/toneicon.png`],
+      labels: ['Ion', 'Legion', 'Monarch', 'Northstar', 'Ronin', 'Scorch', 'Tone']
     },
     {
       id: 1,
       name: 'Pacific Rim',
       photo: `../../assets/images/pacificrimlogo.png`,
-      icons: []
+      icons: [],
+      labels: []
     },
     {
       id: 2,
       name: 'Code Geass',
       photo: `../../assets/images/codegeasslogo.png`,
-      icons: []
+      icons: [],
+      labels: []
     },
     {
       id: 3,
       name: 'Mobile Suit Gundam: Iron-Blooded Orphans',
       photo: `../../assets/images/ironbloodedlogo.png`,
-      icons: []
+      icons: [],
+      labels: []
     },
   ];
 

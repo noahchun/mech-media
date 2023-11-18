@@ -1,6 +1,17 @@
 .icon-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
-    grid-gap: 10px;
+    grid-gap: 100px;
     justify-content: center;
+}
+
+.icon {
+    margin: 0;
+    width: 200px;
+    transition: transform 0.5s;
+    transform: scale(1);
+}
+
+.icon:hover {
+    transform: scale(1.3);
 }

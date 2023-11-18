@@ -1,12 +1,14 @@
 import { Component, inject } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { HousingService } from '../housing.service';
 import { HousingLocation } from '../housinglocation';
 import { HousingLocationComponent } from '../housing-location/housing-location.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-details',
+  imports: [CommonModule],
+  standalone: true,
   template: `
   <article>
     <img class="listing-photo" [src]="housingLocation?.photo"
@@ -17,7 +19,7 @@ import { HousingLocationComponent } from '../housing-location/housing-location.c
     <section class="listing-features">
       <h2 class="section-heading">About this housing location</h2>
       <div class="icon-grid">
-        <img *ngFor="let icon of housingLocation?.icons" [src]="icon" alt="Icon">
+        <img *ngFor="let icon of housingLocation?.icons" [src]="icon" alt="Icon" class="icon">
       </div>
     </section>
   </article>

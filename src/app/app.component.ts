@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { HomeComponent } from './home/home.component';
 import { Router, RouterModule, RouterOutlet, RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { DetailsComponent } from './details/details.component';
 
 @Component({
   selector: 'app-root',

@@ -3,4 +3,5 @@ export interface HousingLocation {
     name: string;
     photo: string;
     icons: string[];
+    labels: string[];
   }
