@@ -30,7 +30,7 @@ import { CommonModule } from '@angular/common';
           <!-- <app-home></app-home> -->
           <router-outlet></router-outlet>
         </section>
-      <img src="./assets/images/circuitboardCopy.svg" class="mirrored-image">
+      <img src="./assets/images/circuitboard.svg" class="mirrored-image">
     </div>
     </main>
   `,

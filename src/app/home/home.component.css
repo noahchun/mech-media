@@ -11,7 +11,11 @@
 }
 
 .search-bar {
-    border-radius: 40px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    flex-grow: 1;
+    margin-bottom: 10%;
 }
 
 @font-face {
@@ -34,4 +38,13 @@
 
 .franchise-logo:hover {
     transform: scale(1.3);
+}
+
+.primary {
+    background-color: rgba(97, 175, 223, 1); 
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }

@@ -4,4 +4,5 @@ export interface HousingLocation {
     photo: string;
     icons: string[];
     labels: string[];
+    franchiseDescription: string;
   }

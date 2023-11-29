@@ -4,12 +4,18 @@ import { HousingService } from '../housing.service';
 import { HousingLocation } from '../housinglocation';
 import { HousingLocationComponent } from '../housing-location/housing-location.component';
 import { CommonModule } from '@angular/common';
+import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-details',
-  imports: [CommonModule],
+  imports: [CommonModule, ReactiveFormsModule],
   standalone: true,
   template: `
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+  </head>
   <article>
     <img class="listing-photo" [src]="housingLocation?.photo"
       alt="Exterior photo of {{housingLocation?.name}}"/>
@@ -17,9 +23,11 @@ import { CommonModule } from '@angular/common';
       <h2 class="listing-heading">{{housingLocation?.name}}</h2>
     </section>
     <section class="listing-features">
-      <h2 class="section-heading">About this housing location</h2>
+      <h2 class="section-heading">{{housingLocation?.franchiseDescription}}</h2>
       <div class="icon-grid">
-        <img *ngFor="let icon of housingLocation?.icons" [src]="icon" alt="Icon" class="icon">
+        <div class="icon-and-name" *ngFor="let icon of housingLocation?.icons; let i = index">
+          <img [src]="icon" alt="Icon" class="icon">
+        </div>
       </div>
     </section>
   </article>
@@ -31,9 +39,21 @@ export class DetailsComponent {
   housingService = inject(HousingService);
   housingLocation: HousingLocation | undefined;
   housingLocationID = -1;
+  applyForm = new FormGroup({
+    firstName: new FormControl(''),
+    lastName: new FormControl(''),
+    email: new FormControl('')
+  });
   constructor() {
     this.housingLocationID = Number(this.route.snapshot.params['id']);    // converts the id parameter acquired from the route from a string to a number
     this.housingLocation = this.housingService.getHousingLocationById(this.housingLocationID);
     console.log(this.housingLocation);
+  }
+  submitApplication() {
+    this.housingService.submitApplication(
+      this.applyForm.value.firstName ?? '',
+      this.applyForm.value.lastName ?? '',
+      this.applyForm.value.email ?? ''
+    );
   }
 }
