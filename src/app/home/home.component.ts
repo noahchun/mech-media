@@ -42,8 +42,12 @@ export class HomeComponent {
   }
 
   constructor() {
-    this.housingLocationList = this.housingService.getAllHousingLocations();       // pulls data from HousingService via dependency injection from line 31
-    this.housingService.getAllHousingLocations();
-    this.filteredLocationList = this.housingLocationList;
+    //this.housingLocationList = this.housingService.getAllHousingLocations();       // pulls data from HousingService via dependency injection from line 31
+    this.housingService.getAllHousingLocations().then((housingLocationList: HousingLocation[]) => {
+      this.housingLocationList = this.housingLocationList;
+      this.filteredLocationList = housingLocationList;
+    });
+    //this.housingService.getAllHousingLocations();
+    //this.filteredLocationList = this.housingLocationList;
   }
 }

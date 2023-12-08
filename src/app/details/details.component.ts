@@ -45,9 +45,11 @@ export class DetailsComponent {
     email: new FormControl('')
   });
   constructor() {
-    this.housingLocationID = Number(this.route.snapshot.params['id']);    // converts the id parameter acquired from the route from a string to a number
-    this.housingLocation = this.housingService.getHousingLocationById(this.housingLocationID);
-    console.log(this.housingLocation);
+    //this.housingLocationID = Number(this.route.snapshot.params['id']);    // converts the id parameter acquired from the route from a string to a number
+    const housingLocationId = parseInt(this.route.snapshot.params['id'], 10);
+    this.housingService.getHousingLocationById(housingLocationId).then(housingLocation => {
+      this.housingLocation = housingLocation;
+    });
   }
   submitApplication() {
     this.housingService.submitApplication(
