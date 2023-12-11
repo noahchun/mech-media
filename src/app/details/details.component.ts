@@ -17,11 +17,12 @@ import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
   </head>
   <article>
+  <div class="gif-text typewriter-text">Titanfall 2</div>
     <img class="listing-photo" [src]="housingLocation?.photo"
       alt="Exterior photo of {{housingLocation?.name}}"/>
-    <section class="listing-description">
-      <h2 class="listing-heading">{{housingLocation?.name}}</h2>
-    </section>
+    <div class="gif-container">
+      <img src="assets/gifs/titanfall2overview.gif" alt="Titanfall 2 Overview" class="overview-gif"/>
+    </div>
     <section class="listing-features">
       <h2 class="section-heading">{{housingLocation?.franchiseDescription}}</h2>
       <div class="icon-grid">

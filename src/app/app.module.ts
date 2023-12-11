@@ -8,6 +8,7 @@ import { DetailsComponent } from './details/details.component';
 import routeConfig from './routes';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   // for components
@@ -21,6 +22,7 @@ import { CommonModule } from '@angular/common';
     BrowserModule,
     RouterModule.forRoot(routeConfig),
     CommonModule
+    ,HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

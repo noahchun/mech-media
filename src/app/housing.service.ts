@@ -30,5 +30,4 @@ export class HousingService {
     console.log(`${firstName}, lastName: ${lastName}, email: ${email}.`);
   }
 
-  constructor() { }
 }
