@@ -9,6 +9,7 @@ import routeConfig from './routes';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
+import { AnimeService } from './anime.service';
 
 @NgModule({
   // for components
@@ -21,10 +22,10 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     RouterModule.forRoot(routeConfig),
-    CommonModule
-    ,HttpClientModule
+    CommonModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [AnimeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

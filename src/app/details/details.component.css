@@ -31,8 +31,17 @@
     margin-top: -5%;
 }
 
+.listing-photo {
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-bottom: 5%;
+}
 .gif-container {
     position: relative;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 15%;
+    margin-top: 0;
 }
 
 .gif-container::before {
@@ -43,7 +52,7 @@
     background-color: rgba(0, 0, 0, 0.5); 
     pointer-events: none; 
     color: white;
-    font-size: 15;
+    font-size: 25;
     z-index: 1;
 }
 
@@ -66,7 +75,7 @@
     justify-content: center;
     align-items: center;
     color: white;
-    font-size: 40px;
+    font-size: 75px;
     z-index: 2;
 }
 
@@ -81,11 +90,14 @@
     border-right: 2px solid hsl(0, 0%, 80%);
     white-space: nowrap;
     animation: typewriter 4s steps(44) 1s 1 normal both, blinkTextCursor 500ms infinite;
+    display: inline-block;
+    margin-top: 15%;
+    margin-left: -28%;
   }
 
 @keyframes typewriter {
     from {
-      width: 0;
+      width: 0%;
     }
     to {
       width: 525px; 
@@ -100,6 +112,7 @@
       border-right-color: transparent;
     }
 }
+
 
 
 

@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { HomeComponent } from './home/home.component';
 import { Router, RouterModule, RouterOutlet, RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { AnimeService } from './anime.service';
+
 
 @Component({
   selector: 'app-root',
@@ -10,10 +12,14 @@ import { CommonModule } from '@angular/common';
     HomeComponent,
     RouterOutlet,
     RouterLink,
-    CommonModule
+    CommonModule,
   ],
   template: `
   <main>
+  <div *ngIf="anime"> 
+    <h1>{{anime.title}}</h1>
+    <img *ngIf="getLargeImageUrl()" [src]="getLargeImageUrl()" alt="Anime Image">
+  </div>
   <a [routerLink]="['/']">
     <div class="header">
       <img class="brand-logo" src="/assets/images/placeholder-logo.png" alt="logo" aria-hidden="true">
@@ -37,6 +43,21 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./app.component.css'],
 })
 
-export class AppComponent {
+export class AppComponent implements OnInit{
+  animeService: AnimeService = inject(AnimeService);
+  anime: any = null;
+  constructor() {
+    console.log('test3');
+  }
+  ngOnInit(): void {
+    console.log('test2');
+    this.animeService.getAnime('Code Geass').subscribe(data=> {
+      this.anime = data.data[0];
+    });
+  }
   title = 'mech-media';
+  getLargeImageUrl(): string | null {
+    return this.anime?.images?.jpg?.large_image_url || null;
+  }
 }
+
