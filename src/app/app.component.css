@@ -6,8 +6,17 @@ body {
 .image-container {
     display: flex;
     justify-content: space-between;
+    width: 100%;
+    height: 100vh; 
+    background-image: url('../assets/images/circuitboard.svg');
+    background-size: contain;
+    background-repeat: repeat-y;
 }
-
+  
+.content {
+    flex: 1;
+}
+  
 .mirrored-image {
     transform: scaleX(-1);
 }
@@ -43,4 +52,11 @@ ul {
     font-family: 'Steelfish', sans-serif;
     font-size: 30px;
     margin-bottom: 15px;
+}
+
+svg {
+    width: 100%;
+    height: 100%; 
+    object-fit: cover; 
+    background-repeat: repeat-y; 
 }

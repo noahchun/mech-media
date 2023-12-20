@@ -9,19 +9,10 @@ import { AnimeService } from '../anime.service';
   selector: 'app-housing-location',
   standalone: true,
   imports: [CommonModule, RouterModule],
-  template: `
-    <section class="listing">
-      <img class="listing-photo" [src]="housingLocation.photo" alt="Exterior photo of {{housingLocation.name}}">
-      <div *ngIf="anime"> 
-        <h1>{{anime.title}}</h1>
-        <img *ngIf="getLargeImageUrl()" [src]="getLargeImageUrl()" alt="Anime Image">
-      </div>
-      <a [routerLink]="['/details', housingLocation.id]">Learn More</a>
-    </section>
-  `,
+  templateUrl: './housing-location.component.html',
   styleUrls: ['./housing-location.component.css'],
 })
-export class HousingLocationComponent implements OnInit{
+export class HousingLocationComponent {
   @Input() housingLocation!: HousingLocation;      // Okay, I received housingLocation from home.component and can use all of its values.
   @Input() anime: any; 
 
@@ -29,14 +20,25 @@ export class HousingLocationComponent implements OnInit{
   constructor() {
     console.log('test3');
   }
+
   ngOnInit(): void {
     console.log('test2');
-    this.animeService.getAnime('Code Geass').subscribe(data=> {
+    this.animeService.getAnime().subscribe(data => {
+      console.log('Anime API response:', data);
       this.anime = data.data[0];
+      console.log('After getAnime is called:' + this.anime.title);
     });
   }
 
   getLargeImageUrl(): string | null {
     return this.anime?.images?.jpg?.large_image_url || null;
+  }
+  
+  getSmallImageUrl(): string | null {
+    return this.anime?.images?.jpg?.small_image_url || null;
+  }
+
+  getImageUrl(): string | null {
+    return this.anime?.images?.jpg?.image_url || null;
   }
 }

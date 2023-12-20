@@ -1,18 +1,16 @@
-<!-- <div class="home-search">
-    <p>Welcome to Mech Media! Browse our catalog of franchises.</p>
-    <div class="search-bar-container">
-        <input type="text" class="search-bar" placeholder="...">
+<section>
+    <div class="home-search">
+        <p>Welcome to Mech Media! Browse our catalog of franchises.</p>
+        <div class="search-bar-container">
+            <button class="primary" type="button">Search</button>
+            <input type="text" class="search-bar" placeholder="Filter by franchise" #filter>
+        </div>
+        <div class="franchise-selection">
+            <app-housing-location
+                class="franchise-logo"
+                *ngFor="let anime of housingLocationList"
+                [housingLocation]="anime"
+            ></app-housing-location>
+        </div>
     </div>
-    <div class="franchise-selection">
-        <app-housing-location class="franchise-logo"
-            *ngFor="let housingLocation of housingLocationList"
-            [housingLocation]="housingLocation">  binding housingLocation that is declared a line above to housingLocation in housing-location.component input
-        </app-housing-location>  Hey, housing-location.component, use housingLocation that's in my ts file. Use it as your @Input value.
-    </div>
-    <div class="franchise-selection">
-        <img src="../../assets/images/titanfall2logo.png" class="franchise-logo">
-        <img src="../../assets//images/pacificrimlogo.png" class="franchise-logo">
-        <img src="../../assets/images/ironbloodedlogo.png" class="franchise-logo">
-    </div>
-    
-</div> -->
+</section>

@@ -25,9 +25,10 @@
 
 .franchise-selection {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-gap: 10%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    margin-left: -10%;
+    
 }
 
 .franchise-logo {

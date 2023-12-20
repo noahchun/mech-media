@@ -16,10 +16,6 @@ import { AnimeService } from './anime.service';
   ],
   template: `
   <main>
-  <div *ngIf="anime"> 
-    <h1>{{anime.title}}</h1>
-    <img *ngIf="getLargeImageUrl()" [src]="getLargeImageUrl()" alt="Anime Image">
-  </div>
   <a [routerLink]="['/']">
     <div class="header">
       <img class="brand-logo" src="/assets/images/placeholder-logo.png" alt="logo" aria-hidden="true">
@@ -30,15 +26,15 @@ import { AnimeService } from './anime.service';
       </div>
     </div>
   </a>
-    <div class="image-container">
-      <img src="./assets/images/circuitboard.svg">
-        <section class="content">
-          <!-- <app-home></app-home> -->
-          <router-outlet></router-outlet>
-        </section>
-      <img src="./assets/images/circuitboard.svg" class="mirrored-image">
-    </div>
-    </main>
+  <div class="image-container">
+    <section class="content">
+      <!-- <app-home></app-home> -->
+      <router-outlet></router-outlet>
+    </section>
+    <img src="./assets/images/circuitboard.svg" class="mirrored-image">
+  </div>
+
+  </main>
   `,
   styleUrls: ['./app.component.css'],
 })
@@ -51,13 +47,17 @@ export class AppComponent implements OnInit{
   }
   ngOnInit(): void {
     console.log('test2');
-    this.animeService.getAnime('Code Geass').subscribe(data=> {
+    this.animeService.getAnime().subscribe(data=> {
       this.anime = data.data[0];
     });
   }
   title = 'mech-media';
   getLargeImageUrl(): string | null {
     return this.anime?.images?.jpg?.large_image_url || null;
+  }
+
+  getSmallImageUrl(): string | null {
+    return this.anime?.images?.jpg?.small_image_url || null;
   }
 }
 
