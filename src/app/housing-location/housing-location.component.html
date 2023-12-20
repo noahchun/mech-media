@@ -1,7 +1,7 @@
 <section class="listing">
     <div *ngIf="anime"> 
       <h1>{{anime.title_english}}</h1>
-      <img *ngIf="getImageUrl()" [src]="getImageUrl()" alt="Anime Image">
+      <img *ngIf="getImageUrl()" [src]="getImageUrl()" alt="Anime Image" class="franchise-image">
     </div>
     <a [routerLink]="['/details', housingLocation.id]">Learn More</a>
 </section>

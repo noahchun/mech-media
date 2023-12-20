@@ -13,6 +13,7 @@ export class AnimeService {
     console.log('test4');
   }
   getAnime(): Observable<any> {
+    // false initially
     if (this.animeList && this.currentIndex < this.animeList.length) {
       const anime = this.animeList[this.currentIndex];
       this.currentIndex++;
@@ -34,7 +35,6 @@ export class AnimeService {
         return of(null);
       })
     );
-    
   }
   private baseURL: string = 'https://api.jikan.moe/v4/anime';
 }

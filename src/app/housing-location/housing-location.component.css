@@ -6,5 +6,10 @@
 
 .listing {
     width: 250px;
-    margin-left: 35%;
+    margin: 20%;
+}
+
+.franchise-image {
+    width: 225px;
+    height: 315px;
 }

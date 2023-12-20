@@ -23,11 +23,11 @@ export class HousingLocationComponent {
 
   ngOnInit(): void {
     console.log('test2');
-    this.animeService.getAnime().subscribe(data => {
-      console.log('Anime API response:', data);
-      this.anime = data.data[0];
-      console.log('After getAnime is called:' + this.anime.title);
-    });
+    // this.animeService.getAnime().subscribe(data => {
+    //   console.log('Anime API response:', data);
+    //   this.anime = data.data[0];
+    //   console.log('After getAnime is called:' + this.anime.title);
+    // });
   }
 
   getLargeImageUrl(): string | null {

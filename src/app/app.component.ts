@@ -27,6 +27,7 @@ import { AnimeService } from './anime.service';
     </div>
   </a>
   <div class="image-container">
+    <img src="./assets/images/circuitboard.svg">
     <section class="content">
       <!-- <app-home></app-home> -->
       <router-outlet></router-outlet>

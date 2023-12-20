@@ -15,13 +15,34 @@ import { AnimeService } from '../anime.service';
 export class HomeComponent implements OnInit {
 
   housingLocationList: any[] = [];
+  filteredLocationList: HousingLocation[] = [];
   housingService: HousingService = inject(HousingService);
 
-  constructor(private animeService: AnimeService) {}
+  constructor(private animeService: AnimeService) {
+    this.filteredLocationList = this.housingLocationList;
+  }
 
   ngOnInit(): void {
     this.animeService.getAnime().subscribe((data: any) => {
       this.housingLocationList = data.data;
+      this.filteredLocationList = this.housingLocationList;
+      console.log('Returned list:' + this.housingLocationList);
     });
+  }
+
+  filterResults(text: string) {
+    if (!text) {
+      this.filteredLocationList = [...this.housingLocationList];
+      console.log('Reset list:' + this.filteredLocationList);
+      return;
+    }
+    this.filteredLocationList = this.housingLocationList.filter(
+      anime => {
+        const title = anime?.title_english?.toLowerCase();
+        console.log('Title:', title);
+        return title.includes(text.toLowerCase());
+      }
+    );
+    console.log('Filtered List:', this.filteredLocationList);
   }
 }

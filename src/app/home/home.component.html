@@ -2,14 +2,15 @@
     <div class="home-search">
         <p>Welcome to Mech Media! Browse our catalog of franchises.</p>
         <div class="search-bar-container">
-            <button class="primary" type="button">Search</button>
+            <button class="primary" type="button" (click)="filterResults(filter.value)">Search</button>
             <input type="text" class="search-bar" placeholder="Filter by franchise" #filter>
         </div>
         <div class="franchise-selection">
             <app-housing-location
                 class="franchise-logo"
-                *ngFor="let anime of housingLocationList"
+                *ngFor="let anime of filteredLocationList"
                 [housingLocation]="anime"
+                [anime]="anime"
             ></app-housing-location>
         </div>
     </div>

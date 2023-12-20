@@ -27,8 +27,8 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
-    margin-left: -10%;
-    
+    grid-column-gap: 15%;
+    margin-left: -35%;
 }
 
 .franchise-logo {
