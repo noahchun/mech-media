@@ -36,6 +36,19 @@ export class AnimeService {
       })
     );
   }
+
+  getLargeImageUrl(anime: any): string | null {
+    return anime?.images?.jpg?.large_image_url || null;
+  }
+  
+  getSmallImageUrl(anime: any): string | null {
+    return anime?.images?.jpg?.small_image_url || null;
+  }
+
+  getImageUrl(anime: any): string | null {
+    return anime?.images?.jpg?.image_url || null;
+  }
+
   private baseURL: string = 'https://api.jikan.moe/v4/anime';
 }
 
