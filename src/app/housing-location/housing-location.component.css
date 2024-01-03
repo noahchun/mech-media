@@ -13,3 +13,8 @@
     width: 225px;
     height: 315px;
 }
+
+.listing-link {
+    text-decoration: none; 
+    cursor: pointer; 
+  }

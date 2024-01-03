@@ -1,5 +1,5 @@
 import { Component, Input, inject } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { HousingService } from '../housing.service';
 import { HousingLocation } from '../housinglocation';
 import { HousingLocationComponent } from '../housing-location/housing-location.component';
@@ -26,12 +26,20 @@ export class DetailsComponent {
     lastName: new FormControl(''),
     email: new FormControl('')
   });
-  constructor(private activatedRoute: ActivatedRoute) { }
+  constructor(private activatedRoute: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
-    this.anime = this.activatedRoute.snapshot.paramMap.get('anime');
-    console.log('Anime in ngOnInit:', this.anime);
+    this.anime = this.router.getCurrentNavigation()?.extras.state?.['anime'];
+    if (!this.anime) {
+      const malId = this.activatedRoute.snapshot.params['mal_id'];
+      // Use your AnimeService to fetch anime details by ID
+      // Replace the following line with your actual service method
+      this.animeService.getAnimeDetails(malId).subscribe(data => {
+        this.anime = data;
+      });
+    }
   }
+
 
   submitApplication() {
     this.housingService.submitApplication(

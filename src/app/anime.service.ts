@@ -37,6 +37,18 @@ export class AnimeService {
     );
   }
 
+  getAnimeDetails(malId: number): Observable<any> {
+    const url = `${this.baseURL}/${malId}`;
+    return this.http.get<any>(url).pipe(
+      tap(data => {
+      }),
+      catchError(error => {
+        console.error(`Error fetching anime details for ID ${malId}: ${error}`);
+        return of(null);
+      })
+    );
+  }
+
   getLargeImageUrl(anime: any): string | null {
     return anime?.images?.jpg?.large_image_url || null;
   }

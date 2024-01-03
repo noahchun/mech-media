@@ -1,7 +1,7 @@
 import { Component, Input, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HousingLocation } from '../housinglocation';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { AnimeService } from '../anime.service';
 
 
@@ -17,8 +17,12 @@ export class HousingLocationComponent {
   @Input() anime: any; 
 
   animeService: AnimeService = inject(AnimeService);
-  constructor() {
+  constructor(private router: Router) {
     console.log('test3');
+  }
+
+  navigateToDetails(): void {
+    this.router.navigate(['/details', this.housingLocation.id], { state: { anime: this.anime } });
   }
 
   ngOnInit(): void {

@@ -1,7 +1,10 @@
-<section class="listing">
-  <div *ngIf="anime"> 
-      <h1>{{ anime.title_english }}</h1>
-      <img *ngIf="getImageUrl()" [src]="getImageUrl()" alt="Anime Image" class="franchise-image">
-      <a [routerLink]="['/details', housingLocation.id, { anime: anime }]">Learn More</a>
-  </div>
-</section>
+<a [routerLink]="['/details', housingLocation.id]" class="listing-link">
+  <section class="listing">
+      <div *ngIf="anime"> 
+          <h1>{{ anime.title_english }}</h1>
+          <img *ngIf="getImageUrl()" [src]="getImageUrl()" alt="Anime Image" class="franchise-image">
+      </div>
+  </section>
+</a>
+
+

@@ -28,6 +28,7 @@
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
     grid-column-gap: 15%;
+    grid-row-gap: 2%;
     margin-left: -35%;
 }
 
