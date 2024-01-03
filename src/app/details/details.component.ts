@@ -32,8 +32,6 @@ export class DetailsComponent {
     this.anime = this.router.getCurrentNavigation()?.extras.state?.['anime'];
     if (!this.anime) {
       const malId = this.activatedRoute.snapshot.params['mal_id'];
-      // Use your AnimeService to fetch anime details by ID
-      // Replace the following line with your actual service method
       this.animeService.getAnimeDetails(malId).subscribe(data => {
         this.anime = data;
       });
