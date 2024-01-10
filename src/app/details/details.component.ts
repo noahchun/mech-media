@@ -29,16 +29,20 @@ export class DetailsComponent {
   constructor(private activatedRoute: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
-    this.anime = this.router.getCurrentNavigation()?.extras.state?.['anime'];
-    if (!this.anime) {
-      const malId = this.activatedRoute.snapshot.params['mal_id'];
-      this.animeService.getAnimeDetails(malId).subscribe(data => {
-        this.anime = data;
-      });
-    }
+    this.activatedRoute.paramMap.subscribe(params => {
+      const malId = params.get('id');
+      console.log('Mal ID from route:', malId);
+  
+      if (malId) {
+        const malIdNumber = Number(malId);
+        this.animeService.getAnimeDetails(malIdNumber).subscribe(data => {
+          this.anime = data;
+          this.anime.data.synopsis =  this.anime.data.synopsis.replace(/\[Written by MAL Rewrite\]/, '');
+        });
+      }
+    });
   }
-
-
+  
   submitApplication() {
     this.housingService.submitApplication(
       this.applyForm.value.firstName ?? '',

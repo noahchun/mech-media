@@ -25,7 +25,7 @@ export class AnimeService {
     console.log('Fetching the entire anime list...');
     
     // prevent too many API calls
-    const url = `${this.baseURL}?q=&genres=18&order_by=members&sort=desc`;
+    const url = `${this.baseURL}?q=&genres=18&order_by=members&sort=desc&type=tv`;
     return this.http.get<any>(url).pipe(
       tap(data => {
         this.animeList = data.data;
@@ -59,6 +59,10 @@ export class AnimeService {
 
   getImageUrl(anime: any): string | null {
     return anime?.images?.jpg?.image_url || null;
+  }
+
+  getSynopsis(anime: any): string | null {
+    return anime?.synopsis || null;
   }
 
   private baseURL: string = 'https://api.jikan.moe/v4/anime';

@@ -45,4 +45,8 @@ export class HousingLocationComponent {
   getImageUrl(): string | null {
     return this.anime?.images?.jpg?.image_url || null;
   }
+
+  getSynopsis(anime: any): string | null {
+    return anime?.synopsis || null;
+  }
 }
