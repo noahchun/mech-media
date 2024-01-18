@@ -14,12 +14,7 @@ export class AnimeService {
   }
   getAnime(): Observable<any> {
     // false initially
-    if (this.animeList && this.currentIndex < this.animeList.length) {
-      const anime = this.animeList[this.currentIndex];
-      this.currentIndex++;
-      console.log("Current anime:" + anime.title);
-      return of({ data: [anime] });
-    }
+    
     // if there is no anime left
     this.currentIndex = 0;
     console.log('Fetching the entire anime list...');
@@ -29,6 +24,7 @@ export class AnimeService {
     return this.http.get<any>(url).pipe(
       tap(data => {
         this.animeList = data.data;
+        console.log(this.animeList);
       }),
       catchError(error => {
         console.error('Error fetching anime:' + error);

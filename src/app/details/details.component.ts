@@ -38,6 +38,12 @@ export class DetailsComponent {
         this.animeService.getAnimeDetails(malIdNumber).subscribe(data => {
           this.anime = data;
           this.anime.data.synopsis =  this.anime.data.synopsis.replace(/\[Written by MAL Rewrite\]/, '');
+          // JavaScript to make logo fade in upon page load
+          const logo = document.querySelector('.logo');
+          if (logo) {
+            logo.classList.add('visible');
+            console.log("Script running");
+          }
         });
       }
     });

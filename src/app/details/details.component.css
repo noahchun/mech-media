@@ -20,6 +20,50 @@
 @font-face {
     font-family: 'Steelfish';
     src: url('../../assets/fonts/steelfish-bd.otf') format('opentype');
+    font-family: 'Poppins';
+    src: url('../../assets/fonts/poppins-regular.otf') format('opentype');
+}
+
+.synopsis {
+  font-family: 'Poppins';
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  opacity: 0;
+}
+
+.visible {
+  opacity: 1;
+  transition-duration: 4s;
+}
+
+.gif-container {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 400px;
+}
+
+.gif-overlay {
+  content: '';
+  position: relative;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  pointer-events: none; 
+  z-index: 1;
+}
+
+.gif-overlay img {
+  position: relative;
+  z-index: 0;
+}
+
+.gif {
+  z-index: 0;
+  position: relative;
 }
 
 .section-heading {
@@ -93,7 +137,7 @@
     display: inline-block;
     margin-top: 15%;
     margin-left: -28%;
-  }
+}
 
 @keyframes typewriter {
     from {
@@ -113,9 +157,9 @@
     }
 }
 
-.synopsis { 
-  margin: 10%;
-}
+
+
+
 
 
 
