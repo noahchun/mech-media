@@ -5,11 +5,11 @@
 </head>
 <div class="synopsis">
     <!-- <h1>{{ anime.data.title_english }}</h1> -->
-    <img src="assets/images/codegeasslogo.png" class="logo">
+    <img src="assets/images/codegeasslogo.png" class="logo" [class.visible]="isAnimeVisible">
 
-    <p *ngIf="anime">{{ anime.data.synopsis }}</p>
+    <p *ngIf="anime" class="placeholder" [class.visible]="isAnimeVisible">{{ anime.data.synopsis }}</p>
     <div class="gif-overlay">
-        <img src="\assets\gifs\code-geass.gif" class="gif">
+        <video src="assets/videos/kallenvssuzaku.mp4" class="video" muted autoplay loop playsinline></video>
     </div>
 </div>
     

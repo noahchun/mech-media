@@ -26,6 +26,7 @@ export class DetailsComponent {
     lastName: new FormControl(''),
     email: new FormControl('')
   });
+  isAnimeVisible = false;
   constructor(private activatedRoute: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
@@ -37,13 +38,12 @@ export class DetailsComponent {
         const malIdNumber = Number(malId);
         this.animeService.getAnimeDetails(malIdNumber).subscribe(data => {
           this.anime = data;
-          this.anime.data.synopsis =  this.anime.data.synopsis.replace(/\[Written by MAL Rewrite\]/, '');
-          // JavaScript to make logo fade in upon page load
-          const logo = document.querySelector('.logo');
-          if (logo) {
-            logo.classList.add('visible');
-            console.log("Script running");
-          }
+          this.anime.data.synopsis = this.anime.data.synopsis.replace(/\[Written by MAL Rewrite\]/, '');
+      
+          // Set isAnimeVisible to true after a delay
+          setTimeout(() => {
+            this.isAnimeVisible = true;
+          }, 500);
         });
       }
     });
