@@ -8,8 +8,11 @@
     <img src="assets/images/codegeasslogo.png" class="logo" [class.visible]="isAnimeVisible">
 
     <p *ngIf="anime" class="placeholder" [class.visible]="isAnimeVisible">{{ anime.data.synopsis }}</p>
-    <div class="gif-overlay">
-        <video src="assets/videos/kallenvssuzaku.mp4" class="video" muted autoplay loop playsinline></video>
+    <div class="gif-overlay" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" [attr.data-aos-once]="true">
+        <div class="dark-overlay">
+            <video src="assets/videos/kallenvssuzaku.mp4" class="video" [class.show-video]="showVideo" muted autoplay loop playsinline></video>
+            <div class="overlay-text">Knightmare Frame</div>
+        </div>
     </div>
 </div>
     

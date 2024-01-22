@@ -27,14 +27,13 @@ import { AnimeService } from './anime.service';
     </div>
   </a>
   <div class="image-container">
-    <img src="./assets/images/circuitboard.svg">
-    <section class="content">
-      <!-- <app-home></app-home> -->
-      <router-outlet></router-outlet>
-    </section>
-    <img src="./assets/images/circuitboard.svg" class="mirrored-image">
+    <div class="scrolling-content">
+      <section class="content">
+        <!-- <app-home></app-home> -->
+        <router-outlet></router-outlet>
+      </section>
+    </div>
   </div>
-
   </main>
   `,
   styleUrls: ['./app.component.css'],

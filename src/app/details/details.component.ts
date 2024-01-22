@@ -6,6 +6,8 @@ import { HousingLocationComponent } from '../housing-location/housing-location.c
 import { CommonModule } from '@angular/common';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { AnimeService } from '../anime.service';
+import * as AOS from 'aos';
+
 
 @Component({
   selector: 'app-details',
@@ -27,9 +29,13 @@ export class DetailsComponent {
     email: new FormControl('')
   });
   isAnimeVisible = false;
+  showVideo = false;
   constructor(private activatedRoute: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
+    AOS.init({
+      startEvent: 'scroll'
+    });
     this.activatedRoute.paramMap.subscribe(params => {
       const malId = params.get('id');
       console.log('Mal ID from route:', malId);
@@ -40,9 +46,9 @@ export class DetailsComponent {
           this.anime = data;
           this.anime.data.synopsis = this.anime.data.synopsis.replace(/\[Written by MAL Rewrite\]/, '');
       
-          // Set isAnimeVisible to true after a delay
           setTimeout(() => {
             this.isAnimeVisible = true;
+            this.showVideo = true;
           }, 500);
         });
       }
