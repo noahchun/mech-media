@@ -3,6 +3,8 @@ import { HomeComponent } from './home/home.component';
 import { Router, RouterModule, RouterOutlet, RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { AnimeService } from './anime.service';
+import * as AOS from 'aos';
+
 
 
 @Component({

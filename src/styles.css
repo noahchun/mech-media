@@ -1,10 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~aos/dist/aos.css";
 body {
     margin: 0;
     padding: 0;
     background-image: url('./assets/images/mech-background.png');
     background-size: cover;
     background-repeat: no-repeat;
+    overflow: hidden;
 }
 
 .image-container {

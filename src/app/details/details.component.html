@@ -8,13 +8,23 @@
     <img src="assets/images/codegeasslogo.png" class="logo" [class.visible]="isAnimeVisible">
 
     <p *ngIf="anime" class="placeholder" [class.visible]="isAnimeVisible">{{ anime.data.synopsis }}</p>
-    <div class="gif-overlay" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" [attr.data-aos-once]="true">
-        <div class="dark-overlay">
-            <video src="assets/videos/kallenvssuzaku.mp4" class="video" [class.show-video]="showVideo" muted autoplay loop playsinline></video>
-            <div class="overlay-text">Knightmare Frame</div>
+    <div class="flip-container">
+        <div class="flipper">
+            <video src="assets/videos/kallenvssuzaku.mp4" class="video" muted autoplay loop playsinline></video>
+            <div class="text-overlay">
+                <p>Knightmare Frame</p>
+            </div>
         </div>
     </div>
+    <div class="fade-in from-left">
+        <img src="assets/images/lancelot.png">
+    </div>
+    <div class="fade-in from-right">
+        <img src="assets/images/shinkiro.png">
+    </div>
 </div>
+
+
     
 
 

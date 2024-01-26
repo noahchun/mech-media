@@ -9,6 +9,7 @@ import { AnimeService } from '../anime.service';
 import * as AOS from 'aos';
 
 
+
 @Component({
   selector: 'app-details',
   imports: [CommonModule, ReactiveFormsModule],
@@ -32,10 +33,39 @@ export class DetailsComponent {
   showVideo = false;
   constructor(private activatedRoute: ActivatedRoute, private router: Router) { }
 
-  ngOnInit(): void {
-    AOS.init({
-      startEvent: 'scroll'
+  ngAfterViewInit() { // delays setup of IntersectionObserver until the view has been completely initialized, needed because of async loading nature
+    setTimeout(() => {
+      this.setupIntersectionObserver();
+    }, 0);
+  }
+
+  private setupIntersectionObserver() {
+    const faders = document.querySelectorAll('.fade-in');
+    const flippedContainer = document.querySelectorAll('.flip-container');
+    const appearOptions = {
+      threshold: 0.5,
+      rootMargin: "0px 0px -100px 0px" // make it appear once the image is 100px in from the bottom of the page
+    };
+
+    const appearOnScroll = new IntersectionObserver((entries, appearOnScroll) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('appear');
+          appearOnScroll.unobserve(entry.target); // stop looking at it once the class has been added
+        }
+      });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+      appearOnScroll.observe(fader);
     });
+    flippedContainer.forEach(flip => {
+      appearOnScroll.observe(flip);
+    })
+  }
+
+  ngOnInit() {
+    AOS.init();
     this.activatedRoute.paramMap.subscribe(params => {
       const malId = params.get('id');
       console.log('Mal ID from route:', malId);
@@ -45,10 +75,9 @@ export class DetailsComponent {
         this.animeService.getAnimeDetails(malIdNumber).subscribe(data => {
           this.anime = data;
           this.anime.data.synopsis = this.anime.data.synopsis.replace(/\[Written by MAL Rewrite\]/, '');
-      
           setTimeout(() => {
-            this.isAnimeVisible = true;
             this.showVideo = true;
+            this.isAnimeVisible = true;
           }, 500);
         });
       }
