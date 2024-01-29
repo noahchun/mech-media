@@ -165,7 +165,7 @@
 }
 
 .from-right {
-  transform: translateX(35%);
+  transform: translateX(75%);
 }
 
 .from-left, 
@@ -174,9 +174,12 @@
   opacity: 0;
 }
 
-.from-left.appear, 
-.from-right.appear {
+.from-left.appear {
   transform: translateX(0);
+  opacity: 1;
+}
+.from-right.appear {
+  transform: translateX(45%);
   opacity: 1;
 }
 
@@ -224,29 +227,42 @@
   grid-template-columns: 1fr 2fr;
 }
 
+.second-mech-info {
+  display: grid;
+  grid-template-columns: 5fr 2fr;
+}
+
 .delayed {
   transition-delay: 0.5s;
   font-family: 'Steelfish', sans-serif;
   font-size: 25px;
 }
 
-.first-weapon .weapon-overlay img {
-  width: 400px;
-  height: 250px;
-  position: absolute;
-}
-
-.first-weapon .weapon-overlay {
+.weapon-overlay {
   opacity: 0;
-  transition: opacity 1s ease-in, transform 1s ease-in;
-  transform: translateX(-20%);
+  transition: opacity 0.5s ease-in, transform 0.5s ease-in;
+  transform: translateX(-20%), translateY(25%);
   top: 0;
   margin-left: 40%;
 }
 
-.first-weapon:hover .weapon-overlay {
+.weapon-overlay img {
+  width: 400px;
+  height: 250px;
+  position: absolute;
+  border-radius: 25px;
+}
+
+.first-weapon:hover .weapon-overlay,
+.second-weapon:hover .weapon-overlay,
+.third-weapon:hover .weapon-overlay,
+.fourth-weapon:hover .weapon-overlay {
   opacity: 1;
   transform: translateX(0);
+}
+
+.second-mech {
+  height: 575px;
 }
 
 

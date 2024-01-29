@@ -47,7 +47,7 @@ export class DetailsComponent {
       rootMargin: "0px 0px -100px 0px" // make it appear once the image is 100px in from the bottom of the page
     };
 
-    const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+    const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {  // appearOnScroll is the observer
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add('appear');
