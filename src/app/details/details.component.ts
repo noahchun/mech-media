@@ -6,7 +6,6 @@ import { HousingLocationComponent } from '../housing-location/housing-location.c
 import { CommonModule } from '@angular/common';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { AnimeService } from '../anime.service';
-import * as AOS from 'aos';
 
 
 
@@ -65,7 +64,6 @@ export class DetailsComponent {
   }
 
   ngOnInit() {
-    AOS.init();
     this.activatedRoute.paramMap.subscribe(params => {
       const malId = params.get('id');
       console.log('Mal ID from route:', malId);

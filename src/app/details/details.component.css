@@ -191,6 +191,7 @@
   perspective: 1000px;
   opacity: 0;
   transition: transform 1s ease-in, opacity 1s ease-in;
+  margin-bottom: 10%;
 }
 
 .flip-container.appear {
@@ -225,11 +226,13 @@
 .mech-info {
   display: grid;
   grid-template-columns: 1fr 2fr;
+  margin-bottom: 10%;
 }
 
 .second-mech-info {
   display: grid;
-  grid-template-columns: 5fr 2fr;
+  grid-template-columns: 1fr 2fr;
+  margin-bottom: 5%;
 }
 
 .delayed {
@@ -251,6 +254,7 @@
   height: 250px;
   position: absolute;
   border-radius: 25px;
+  margin-top: -15%;
 }
 
 .first-weapon:hover .weapon-overlay,
@@ -265,7 +269,25 @@
   height: 575px;
 }
 
+.left-description {
+  width: 500px;
+}
 
+.right-image {
+  margin-left: -15%;
+}
+
+.move-left {
+  margin-left: -15%;
+}
+
+.mech-info img {
+  margin-right: 15%;
+}
+
+.bottom-space {
+  margin-bottom: 20%;
+}
 
 
 
