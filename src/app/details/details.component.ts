@@ -32,6 +32,9 @@ export class DetailsComponent implements OnInit {
   mechOverview: string | undefined;
   video1: string | undefined;
   mechLabel: string | undefined;
+  text: {
+    [key: string]: string;
+  } | undefined;
   isAnimeVisible = false;
   showVideo = false;
   constructor(private activatedRoute: ActivatedRoute, private router: Router) { }
@@ -80,6 +83,7 @@ export class DetailsComponent implements OnInit {
           this.mechOverview = animeDetailsData[malId]?.mechOverview;
           this.video1 = animeDetailsData[malId]?.video['video1'];
           this.mechLabel = animeDetailsData[malId]?.mechLabel;
+          this.text = animeDetailsData[malId]?.text;
           setTimeout(() => {
             this.showVideo = true;
             this.isAnimeVisible = true;

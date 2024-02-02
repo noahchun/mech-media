@@ -5,4 +5,5 @@ export interface AnimeDetails {
     mechLabel: string;
     images: { [key: string]: string };
     gifs: { [key: string]: string };
+    text: { [key: string]: string };
 }
