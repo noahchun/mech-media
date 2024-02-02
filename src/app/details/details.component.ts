@@ -1,4 +1,4 @@
-import { Component, Input, inject } from '@angular/core';
+import { Component, Input, OnInit, inject } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HousingService } from '../housing.service';
 import { HousingLocation } from '../housinglocation';
@@ -6,6 +6,7 @@ import { HousingLocationComponent } from '../housing-location/housing-location.c
 import { CommonModule } from '@angular/common';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { AnimeService } from '../anime.service';
+import { animeDetailsData } from '../anime-details-data';
 
 
 
@@ -16,7 +17,7 @@ import { AnimeService } from '../anime.service';
   templateUrl: './details.component.html',
   styleUrls: ['./details.component.css']
 })
-export class DetailsComponent {
+export class DetailsComponent implements OnInit {
   route: ActivatedRoute = inject(ActivatedRoute);    // enables me to have access to the data about the current route
   @Input() anime: any; 
   animeService: AnimeService = inject(AnimeService);
@@ -28,6 +29,9 @@ export class DetailsComponent {
     lastName: new FormControl(''),
     email: new FormControl('')
   });
+  mechOverview: string | undefined;
+  video1: string | undefined;
+  mechLabel: string | undefined;
   isAnimeVisible = false;
   showVideo = false;
   constructor(private activatedRoute: ActivatedRoute, private router: Router) { }
@@ -56,11 +60,11 @@ export class DetailsComponent {
     }, appearOptions);
 
     faders.forEach(fader => {
-      appearOnScroll.observe(fader);
+      appearOnScroll.observe(fader); // waits until I assign a target to our observer
     });
     flippedContainer.forEach(flip => {
       appearOnScroll.observe(flip);
-    })
+    });
   }
 
   ngOnInit() {
@@ -73,6 +77,9 @@ export class DetailsComponent {
         this.animeService.getAnimeDetails(malIdNumber).subscribe(data => {
           this.anime = data;
           this.anime.data.synopsis = this.anime.data.synopsis.replace(/\[Written by MAL Rewrite\]/, '');
+          this.mechOverview = animeDetailsData[malId]?.mechOverview;
+          this.video1 = animeDetailsData[malId]?.video['video1'];
+          this.mechLabel = animeDetailsData[malId]?.mechLabel;
           setTimeout(() => {
             this.showVideo = true;
             this.isAnimeVisible = true;

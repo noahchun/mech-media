@@ -10,18 +10,15 @@
     <p *ngIf="anime" class="placeholder" [class.visible]="isAnimeVisible">{{ anime.data.synopsis }}</p>
     <div class="flip-container">
         <div class="flipper">
-            <video src="assets/videos/kallenvssuzaku.mp4" class="video" muted autoplay loop playsinline></video>
+            <video [src]="video1" class="video" muted autoplay loop playsinline></video>
             <div class="text-overlay">
-                <p>Knightmare Frame</p>
+                {{ mechLabel }}
             </div>
         </div>
     </div>
 
     <div class="mech-overview">
-        <p>Knightmare Frames are humanoid war machines developed by the Holy Britannian Empire. 
-            Unveiled during the invasion of Japan, Knightmare Frames are almost exclusively used in place, 
-            and sometimes alongside of, the practically obsolete main battle tanks. They typically stand between
-            4-5 meters tall. Its abilities allowed the Britannian Empire to easily dominate Japan during its invasion.</p>
+        {{ mechOverview }}
     </div>
 
     <div class="mech-info"> <!-- Replace mech info based on selected anime later -->
@@ -96,7 +93,7 @@
     </div>
 
     <div class="mech-info move-left bottom-space">
-        <img src="assets/images/guren_seiten.png" class="fade-in from-left">
+        <img src="assets/images/guren-seiten.png" class="fade-in from-left">
         <div class="fade-in from-left delayed">
             <h2>Guren S.E.I.T.E.N. Eight Elements</h2>
             <p>Pilot: Kallen Kōzuki</p>
