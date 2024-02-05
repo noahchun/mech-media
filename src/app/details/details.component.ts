@@ -29,9 +29,16 @@ export class DetailsComponent implements OnInit {
     lastName: new FormControl(''),
     email: new FormControl('')
   });
+  logo: string | undefined;
   mechOverview: string | undefined;
   video1: string | undefined;
   mechLabel: string | undefined;
+  images: {
+    [key: string]: string;
+  } | undefined;
+  gifs: {
+    [key: string]: string;
+  } | undefined;
   text: {
     [key: string]: string;
   } | undefined;
@@ -80,10 +87,14 @@ export class DetailsComponent implements OnInit {
         this.animeService.getAnimeDetails(malIdNumber).subscribe(data => {
           this.anime = data;
           this.anime.data.synopsis = this.anime.data.synopsis.replace(/\[Written by MAL Rewrite\]/, '');
+          this.logo = animeDetailsData[malId]?.images['logo'];
           this.mechOverview = animeDetailsData[malId]?.mechOverview;
           this.video1 = animeDetailsData[malId]?.video['video1'];
           this.mechLabel = animeDetailsData[malId]?.mechLabel;
+          this.images = animeDetailsData[malId]?.images;
+          this.gifs = animeDetailsData[malId]?.gifs;
           this.text = animeDetailsData[malId]?.text;
+          console.log('text:', animeDetailsData[malId]?.text);
           setTimeout(() => {
             this.showVideo = true;
             this.isAnimeVisible = true;

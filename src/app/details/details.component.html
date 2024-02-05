@@ -5,7 +5,7 @@
 </head>
 <div class="synopsis">
     <!-- <h1>{{ anime.data.title_english }}</h1> -->
-    <img src="assets/images/codegeasslogo.png" class="logo" [class.visible]="isAnimeVisible">
+    <img [src]="logo" class="logo" [class.visible]="isAnimeVisible">
 
     <p *ngIf="anime" class="placeholder" [class.visible]="isAnimeVisible">{{ anime.data.synopsis }}</p>
     <div class="flip-container">
@@ -22,32 +22,30 @@
     </div>
 
     <div class="mech-info"> <!-- Replace mech info based on selected anime later -->
-        <img src="assets/images/lancelot.png" class="fade-in from-left">
+        <img [src]="images?.['mech1']" class="fade-in from-left">
         <div class="fade-in from-left delayed">
-            <h2>Z-01 Lancelot</h2>
-            <p>Pilot: Suzaku Kururugi</p>
-            <p>The first ever seventh generation Knightmare Frame, Lancelot
-                outperforms other units due to its high amount of sakuradite. 
-            </p>
+            <h2>{{ text?.['mech1Name'] }}</h2>
+            <p>Pilot: {{ text?.['mech1Pilot'] }}</p>
+            <p>{{ text?.['mech1Description'] }}</p>
             <ul> Weaponry (Hover Over!)
-                <li class="first-weapon">Blaze Luminous Shields
+                <li class="first-weapon">{{ text?.['mech1weapon1'] }}
                     <div class="weapon-overlay">
-                        <img src="assets/images/lancelot-blaze-luminous.png">
+                        <img [src]="gifs?.['mech1-weapon1-gif']">
                     </div>
                 </li>
-                <li class="second-weapon">Slash Harkens
+                <li class="second-weapon">{{ text?.['mech1weapon2'] }}
                     <div class="weapon-overlay">
-                        <img src="assets/images/lancelot-slash-harkens.png">
+                        <img [src]="gifs?.['mech1-weapon2-gif']">
                     </div>
                 </li>
-                <li class="third-weapon">Maser Vibration Swords
+                <li class="third-weapon">{{ text?.['mech1weapon3'] }}
                     <div class="weapon-overlay">
-                        <img src="assets/images/lancelot-swords.png">
+                        <img [src]="gifs?.['mech1-weapon3-gif']">
                     </div>
                 </li>
-                <li class="fourth-weapon">VARIS Particle Rifle
+                <li class="fourth-weapon">{{ text?.['mech1weapon4'] }}
                     <div class="weapon-overlay">
-                        <img src="assets/images/lancelot-rifle.png">
+                        <img [src]="gifs?.['mech1-weapon4-gif']">
                     </div>
                 </li>
             </ul>
@@ -55,72 +53,65 @@
     </div>
     <div class="second-mech-info">
         <div class="fade-in from-right delayed left-description">
-            <h2>Z-01Z Lancelot Albion</h2>
-            <p>Pilot: Suzaku Kururugi</p>
-            <p>Being one of two ninth-generation frames seen in Code Geass, the Lancelot Albion
-                was the strongest unit of the Britannia led by Lelouch. Its advanced energy wings
-                is capable of launching dagger-like projectiles.
-            </p>
+            <h2>{{ text?.['mech2Name'] }}</h2>
+            <p>Pilot: {{ text?.['mech2Pilot'] }}</p>
+            <p>{{ text?.['mech2Description'] }}</p>
             <ul> Weaponry (Hover Over!)
-                <li class="first-weapon">Energy Wings
+                <li class="first-weapon">{{ text?.['mech2weapon1'] }}
                     <div class="weapon-overlay">
-                        <img src="assets/gifs/lancelot-albion-wings.gif">
+                        <img [src]="gifs?.['mech2-weapon1-gif']">
                     </div>
                 </li>
-                <li class="first-weapon">Blaze Luminous Shields
+                <li class="first-weapon">{{ text?.['mech2weapon2'] }}
                     <div class="weapon-overlay">
-                        <img src="assets/gifs/lancelot-albion-shield.gif">
+                        <img [src]="gifs?.['mech2-weapon2-gif']">
                     </div>
                 </li>
-                <li class="second-weapon">Slash Harkens
+                <li class="second-weapon">{{ text?.['mech2weapon3'] }}
                     <div class="weapon-overlay">
-                        <img src="assets/gifs/lancelot-albion-harkens.gif">
+                        <img [src]="gifs?.['mech2-weapon3-gif']">
                     </div>
                 </li>
-                <li class="third-weapon">Maser Vibration Swords
+                <li class="third-weapon">{{ text?.['mech2weapon4'] }}
                     <div class="weapon-overlay">
-                        <img src="assets/gifs/lancelot-albion-swords.gif">
+                        <img [src]="gifs?.['mech2-weapon4-gif']">
                     </div>
                 </li>
-                <li class="fourth-weapon">Super VARIS Particle Rifle
+                <li class="fourth-weapon">{{ text?.['mech2weapon5'] }}
                     <div class="weapon-overlay">
-                        <img src="assets/images/lancelot-albion-rifles.png">
+                        <img [src]="gifs?.['mech2-weapon5-gif']">
                     </div>
                 </li>
             </ul>
         </div>
-        <img src="assets/images/lancelot-albion.png" class="second-mech fade-in from-right right-image">
+        <img [src]="images?.['mech2']" class="second-mech fade-in from-right right-image">
     </div>
 
     <div class="mech-info move-left bottom-space">
-        <img src="assets/images/guren-seiten.png" class="fade-in from-left">
+        <img [src]="images?.['mech3']" class="fade-in from-left">
         <div class="fade-in from-left delayed">
-            <h2>Guren S.E.I.T.E.N. Eight Elements</h2>
-            <p>Pilot: Kallen Kōzuki</p>
-            <p>The world's first ninth-generation Knightmare Frame, the Guren was 
-                the first frame to employ the use of energy wing technology. Its 
-                upgraded Radiant Wave Surger arm paired with blinding speed makes
-                the Guren a force to be reckoned with.
-            </p>
+            <h2>{{ text?.['mech3Name'] }}</h2>
+            <p>Pilot: {{ text?.['mech3Pilot'] }}</p>
+            <p>{{ text?.['mech3Description'] }}</p>
             <ul> Weaponry (Hover Over!)
-                <li class="first-weapon">Energy Wings
+                <li class="first-weapon">{{ text?.['mech3weapon1'] }}
                     <div class="weapon-overlay">
-                        <img src="assets/gifs/guren-seiten-wings.gif">
+                        <img [src]="gifs?.['mech3-weapon1-gif']">
                     </div>
                 </li>
-                <li class="first-weapon">Radiant Wave Surger
+                <li class="first-weapon">{{ text?.['mech3weapon2'] }}
                     <div class="weapon-overlay">
-                        <img src="assets/gifs/guren-seiten-wave-surger.gif">
+                        <img [src]="gifs?.['mech3-weapon2-gif']">
                     </div>
                 </li>
-                <li class="second-weapon">MVS Fork Knife
+                <li class="second-weapon">{{ text?.['mech3weapon3'] }}
                     <div class="weapon-overlay">
-                        <img src="assets/gifs/guren-seiten-dagger.gif">
+                        <img [src]="gifs?.['mech3-weapon3-gif']">
                     </div>
                 </li>
-                <li class="third-weapon">Slash Harkens
+                <li class="third-weapon">{{ text?.['mech3weapon4'] }}
                     <div class="weapon-overlay">
-                        <img src="assets/gifs/guren-seiten-harkens.gif">
+                        <img [src]="gifs?.['mech3-weapon4-gif']">
                     </div>
                 </li>
             </ul>

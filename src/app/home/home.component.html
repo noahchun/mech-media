@@ -6,12 +6,14 @@
             <input type="text" class="search-bar" placeholder="Filter by franchise" #filter>
         </div>
         <div class="franchise-selection">
-            <app-housing-location
-                class="franchise-logo"
-                *ngFor="let anime of filteredLocationList"
-                [housingLocation]="anime"
-                [anime]="anime"
-            ></app-housing-location>
+            <ng-container *ngFor="let anime of filteredLocationList; let i = index">
+                <app-housing-location
+                    class="franchise-logo"
+                    *ngIf="i === 0 || i === 1 || i === 6 || i === 20 || i === 23"  
+                    [housingLocation]="anime"
+                    [anime]="anime"
+                ></app-housing-location>
+            </ng-container>
         </div>
     </div>
 </section>
