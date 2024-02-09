@@ -47,6 +47,11 @@ export class DetailsComponent implements OnInit {
   constructor(private activatedRoute: ActivatedRoute, private router: Router) { }
 
   ngAfterViewInit() { // delays setup of IntersectionObserver until the view has been completely initialized, needed because of async loading nature
+    const flippedContainer = document.querySelector('.flip-container');
+    if (flippedContainer?.classList.contains('appear')) {
+      flippedContainer.classList.remove('appear');
+      console.log('appear removed');
+    }
     setTimeout(() => {
       this.setupIntersectionObserver();
     }, 0);
@@ -78,6 +83,12 @@ export class DetailsComponent implements OnInit {
   }
 
   ngOnInit() {
+    if (!localStorage.getItem('foo')) { 
+      localStorage.setItem('foo', 'no reload'); 
+      location.reload(); 
+    } else {
+      localStorage.removeItem('foo'); 
+    }
     this.activatedRoute.paramMap.subscribe(params => {
       const malId = params.get('id');
       console.log('Mal ID from route:', malId);

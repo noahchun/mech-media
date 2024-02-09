@@ -231,6 +231,7 @@
   display: grid;
   grid-template-columns: 1fr 2fr;
   margin-bottom: 10%;
+  margin-right: 10%;
 }
 
 .second-mech-info {
