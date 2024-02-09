@@ -82,19 +82,19 @@ export const animeDetailsData: { [key: string]: AnimeDetails } = {
         "mech3": "assets/images/gundam-gusion.png"
     },
     gifs: {
-        "mech1-weapon1": "assets/gifs/barbatos-mace.png",
-        "mech1-weapon2": "assets/gifs/barbatos-tail.gif",
-        "mech1-weapon3": "assets/gifs/barbatos-claws.gif",
-        "mech1-weapon4": "assets/gifs/barbatos-cannon.gif",
-        "mech2-weapon1": "assets/gifs/lancelot-albion-wings.gif",
-        "mech2-weapon2": "assets/gifs/lancelot-albion-shield.gif",
-        "mech2-weapon3": "assets/gifs/lancelot-albion-harkens.gif",
-        "mech2-weapon4": "assets/gifs/lancelot-albion-swords.gif",
-        "mech2-weapon5": "assets/images/lancelot-albion-rifles.png",
-        "mech3-weapon1": "assets/gifs/guren-seiten-wings.gif",
-        "mech3-weapon2": "assets/gifs/guren-seiten-wave-surger.gif",
-        "mech3-weapon3": "assets/gifs/guren-seiten-dagger.gif",
-        "mech3-weapon4": "assets/gifs/guren-seiten-harkens.gif"
+      "mech1-weapon1-gif": "assets/gifs/barbatos-mace.gif",
+      "mech1-weapon2-gif": "assets/gifs/barbatos-tail.gif",
+      "mech1-weapon3-gif": "assets/gifs/barbatos-claws.gif",
+      "mech1-weapon4-gif": "assets/gifs/barbatos-cannon.gif",
+      "mech2-weapon1-gif": "assets/gifs/lancelot-albion-wings.gif",
+      "mech2-weapon2-gif": "assets/gifs/lancelot-albion-shield.gif",
+      "mech2-weapon3-gif": "assets/gifs/lancelot-albion-harkens.gif",
+      "mech2-weapon4-gif": "assets/gifs/lancelot-albion-swords.gif",
+      "mech2-weapon5-gif": "assets/images/lancelot-albion-rifles.png",
+      "mech3-weapon1-gif": "assets/gifs/guren-seiten-wings.gif",
+      "mech3-weapon2-gif": "assets/gifs/guren-seiten-wave-surger.gif",
+      "mech3-weapon3-gif": "assets/gifs/guren-seiten-dagger.gif",
+      "mech3-weapon4-gif": "assets/gifs/guren-seiten-harkens.gif"
     },
     text: {
       "mech1Name": "ASW-G-08 Gundam Barbatos Lupus Rex",
