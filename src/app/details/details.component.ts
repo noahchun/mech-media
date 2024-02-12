@@ -83,12 +83,6 @@ export class DetailsComponent implements OnInit {
   }
 
   ngOnInit() {
-    if (!localStorage.getItem('foo')) { 
-      localStorage.setItem('foo', 'no reload'); 
-      location.reload(); 
-    } else {
-      localStorage.removeItem('foo'); 
-    }
     this.activatedRoute.paramMap.subscribe(params => {
       const malId = params.get('id');
       console.log('Mal ID from route:', malId);
