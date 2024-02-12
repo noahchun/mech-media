@@ -168,7 +168,7 @@
 }
 
 .from-right {
-  transform: translateX(75%);
+  transform: translateX(55%);
 }
 
 .from-left, 
@@ -181,8 +181,9 @@
   transform: translateX(0);
   opacity: 1;
 }
+
 .from-right.appear {
-  transform: translateX(45%);
+  transform: translateX(35%);
   opacity: 1;
 }
 
@@ -236,8 +237,12 @@
 
 .second-mech-info {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 3fr;
   margin-bottom: 5%;
+}
+
+.second-mech-info > :first-child {
+  margin-left: -10%;
 }
 
 .delayed {
@@ -272,7 +277,7 @@
 
 .second-mech {
   height: 575px;
-  margin-left: 10%;
+  
 }
 
 .left-description {
@@ -280,7 +285,7 @@
 }
 
 .right-image {
-  margin-left: -15%;
+  
 }
 
 .move-left {

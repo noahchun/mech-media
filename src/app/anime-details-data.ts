@@ -145,7 +145,7 @@ export const animeDetailsData: { [key: string]: AnimeDetails } = {
     video: {
         "video1": "assets/videos/evas.mp4"
     },
-    mechLabel: "Evangelions",
+    mechLabel: "Evangelion",
     images: {
         "logo": "assets/images/evangelion-logo.png",
         "mech1": "assets/images/eva-00.png",
@@ -153,7 +153,7 @@ export const animeDetailsData: { [key: string]: AnimeDetails } = {
         "mech3": "assets/images/eva-02.png"
     },
     gifs: {
-      "mech1-weapon1-gif": "assets/gifs/evangelion/unit-00-rifle.JPG",
+      "mech1-weapon1-gif": "assets/gifs/evangelion/unit-00-sniper.gif",
       "mech1-weapon2-gif": "assets/gifs/evangelion/unit-00-knife.JPG",
       "mech1-weapon3-gif": "assets/gifs/evangelion/unit-00-spear.gif",
       "mech1-weapon4-gif": "assets/gifs/evangelion/unit-00-bomb.gif",
@@ -202,5 +202,4 @@ export const animeDetailsData: { [key: string]: AnimeDetails } = {
       "mech3weapon4": "Smoothbore Guns"
     }
   }
-
 };
