@@ -157,15 +157,15 @@ export const animeDetailsData: { [key: string]: AnimeDetails } = {
       "mech1-weapon2-gif": "assets/gifs/evangelion/unit-00-knife.JPG",
       "mech1-weapon3-gif": "assets/gifs/evangelion/unit-00-spear.gif",
       "mech1-weapon4-gif": "assets/gifs/evangelion/unit-00-bomb.gif",
-      "mech2-weapon1-gif": "assets/gifs/flauros-cannon-mode.gif",
-      "mech2-weapon2-gif": "assets/gifs/flauros-cannons.gif",
-      "mech2-weapon3-gif": "assets/gifs/flauros-machine-guns.png",
-      "mech2-weapon4-gif": "assets/gifs/flauros-knife.png",
+      "mech2-weapon1-gif": "assets/gifs/evangelion/unit-01-rifle.gif",
+      "mech2-weapon2-gif": "assets/gifs/evangelion/unit-01-knife.gif",
+      "mech2-weapon3-gif": "assets/gifs/evangelion/unit-01-sniper.gif",
+      "mech2-weapon4-gif": "assets/gifs/evangelion/unit-01-gatling-gun.gif",
       "mech2-weapon5-gif": "",
-      "mech3-weapon1-gif": "assets/gifs/gusion-scissors.gif",
-      "mech3-weapon2-gif": "assets/gifs/gusion-guns.gif",
-      "mech3-weapon3-gif": "assets/gifs/gusion-halberd.gif",
-      "mech3-weapon4-gif": "assets/gifs/gusion-cannons.gif"
+      "mech3-weapon1-gif": "assets/gifs/evangelion/unit-02-rifle.gif",
+      "mech3-weapon2-gif": "assets/gifs/evangelion/unit-02-knife.gif",
+      "mech3-weapon3-gif": "assets/gifs/evangelion/unit-02-crossbow.gif",
+      "mech3-weapon4-gif": "assets/gifs/evangelion/unit-02-needle.gif"
     },
     text: {
       "mech1Name": "Evangelion Unit-00",
@@ -176,30 +176,86 @@ export const animeDetailsData: { [key: string]: AnimeDetails } = {
       "mech1weapon3": "Spear of Longinus",
       "mech1weapon4": "N² Bomb",
 
-      "mech2Name": "ASW-G-64 Gundam Flauros",
-      "mech2Pilot": "Norba Shino",
-      "mech2Description" : "The Gundam Flauros is the 64th of the 72 Gundam Frames created by Gjallarhorn \
-        near the end of the Calamity War to counter the threat of the powerful mobile armors such as Hashmal. \
-        It was salvaged and sent to Saisei to be repaired and overhauled, with its original colors replaced \
-        by the distinctive magenta color favored by Norba Shino. Once repairs were complete, Flauros was sent \
-        back to Mars to assist Tekkadan against the awakened Hashmal.",
-      "mech2weapon1": "Shelling Mode Railguns",
-      "mech2weapon2": "Short-Barrelled Cannon",
-      "mech2weapon3": "120mm Machine Guns",
-      "mech2weapon4": "Assault Knife",
+      "mech2Name": "Evangelion Unit-01",
+      "mech2Pilot": "Shinji Ikari",
+      "mech2Description" : "Unit-01 stands out from the other units as it frequently acts independently, \
+        without the instructions of a pilot and without any apparent power source. Unit-01 will also take \
+        action to protect its pilot while sometimes servicing other interests.",
+      "mech2weapon1": "Pallet Rifle",
+      "mech2weapon2": "Progressive Knife",
+      "mech2weapon3": "Positron Sniper Rifle",
+      "mech2weapon4": "440mm Gatling Gun",
       "mech2weapon5": "",
 
-      "mech3Name": "ASW-G-11 Gundam Gusion Rebake Full City",
-      "mech3Pilot": "Akihiro Altland",
-      "mech3Description" : "Like the Gundam Barbatos, the Gundam Gusion Rebake had severe damage through \
-        repeated battles, so it was upgraded into a new form by Teiwaz. The process utilized the recently\
-        acquired mechanical data from the Calamity War era, restoring the suit's original performance, and \
-        combined it with equipment feedback based on Akihiro's combat records. Its unique sub-arms effectively \
-        act as extra hands, allowing it to wield up to four weapons.",
-      "mech3weapon1": "Scissor-Variable Rear Armor",
-      "mech3weapon2": "120mm Long Range Rifle",
-      "mech3weapon3": "Halberd",
-      "mech3weapon4": "Smoothbore Guns"
+      "mech3Name": "Evangelion Unit-02",
+      "mech3Pilot": "Asuka Sohryu",
+      "mech3Description" : "The design of Unit-02 supposedly rectifies the mistakes made during the \
+        construction of Prototype Unit-00 and Test Type Unit-01, making it the first Evangelion built \
+        specifically for combat against the Angels.",
+      "mech3weapon1": "Positron Rifle",
+      "mech3weapon2": "Progressive Knife",
+      "mech3weapon3": "Electromagnetic Crossbow",
+      "mech3weapon4": "Needle Launcher"
+    }
+  },
+  "41457": {
+    malId: 41457,
+    mechOverview: "The mechs that are featured in 86 are unique in the sense that they all resemble prowling spiders. \
+      The designs forego the usual bipedal, humanoid silhouettes that most other mecha use.",
+    video: {
+        "video1": "assets/videos/86video.mp4"
+    },
+    mechLabel: "Feldreẞ",
+    images: {
+        "logo": "assets/images/86-logo.png",
+        "mech1": "assets/images/juggernaut.png",
+        "mech2": "assets/images/reginleif.png",
+        "mech3": "assets/images/vanagandr.png"
+    },
+    gifs: {
+      "mech1-weapon1-gif": "assets/gifs/evangelion/unit-00-sniper.gif",
+      "mech1-weapon2-gif": "assets/gifs/evangelion/unit-00-knife.JPG",
+      "mech1-weapon3-gif": "assets/gifs/evangelion/unit-00-spear.gif",
+      "mech1-weapon4-gif": "assets/gifs/evangelion/unit-00-bomb.gif",
+      "mech2-weapon1-gif": "assets/gifs/evangelion/unit-01-rifle.gif",
+      "mech2-weapon2-gif": "assets/gifs/evangelion/unit-01-knife.gif",
+      "mech2-weapon3-gif": "assets/gifs/evangelion/unit-01-sniper.gif",
+      "mech2-weapon4-gif": "assets/gifs/evangelion/unit-01-gatling-gun.gif",
+      "mech2-weapon5-gif": "",
+      "mech3-weapon1-gif": "assets/gifs/evangelion/unit-02-rifle.gif",
+      "mech3-weapon2-gif": "assets/gifs/evangelion/unit-02-knife.gif",
+      "mech3-weapon3-gif": "assets/gifs/evangelion/unit-02-crossbow.gif",
+      "mech3-weapon4-gif": "assets/gifs/evangelion/unit-02-needle.gif"
+    },
+    text: {
+      "mech1Name": "Evangelion Unit-00",
+      "mech1Pilot": "Rei Ayanami",
+      "mech1Description": "Evangelion Unit-00 is the first functional Evangelion unit created, serving as the prototype for the rest of the Evangelion series.",
+      "mech1weapon1": "Sniper Rifle",
+      "mech1weapon2": "Progressive Knife",
+      "mech1weapon3": "Spear of Longinus",
+      "mech1weapon4": "N² Bomb",
+
+      "mech2Name": "Evangelion Unit-01",
+      "mech2Pilot": "Shinji Ikari",
+      "mech2Description" : "Unit-01 stands out from the other units as it frequently acts independently, \
+        without the instructions of a pilot and without any apparent power source. Unit-01 will also take \
+        action to protect its pilot while sometimes servicing other interests.",
+      "mech2weapon1": "Pallet Rifle",
+      "mech2weapon2": "Progressive Knife",
+      "mech2weapon3": "Positron Sniper Rifle",
+      "mech2weapon4": "440mm Gatling Gun",
+      "mech2weapon5": "",
+
+      "mech3Name": "Evangelion Unit-02",
+      "mech3Pilot": "Asuka Sohryu",
+      "mech3Description" : "The design of Unit-02 supposedly rectifies the mistakes made during the \
+        construction of Prototype Unit-00 and Test Type Unit-01, making it the first Evangelion built \
+        specifically for combat against the Angels.",
+      "mech3weapon1": "Positron Rifle",
+      "mech3weapon2": "Progressive Knife",
+      "mech3weapon3": "Electromagnetic Crossbow",
+      "mech3weapon4": "Needle Launcher"
     }
   }
 };

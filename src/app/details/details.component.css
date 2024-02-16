@@ -233,6 +233,7 @@
   grid-template-columns: 1fr 2fr;
   margin-bottom: 10%;
   margin-right: 10%;
+  gap: 20px;
 }
 
 .second-mech-info {
@@ -277,7 +278,6 @@
 
 .second-mech {
   height: 575px;
-  
 }
 
 .left-description {
