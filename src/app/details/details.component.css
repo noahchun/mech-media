@@ -183,7 +183,7 @@
 }
 
 .from-right.appear {
-  transform: translateX(35%);
+  transform: translateX(0%);
   opacity: 1;
 }
 
@@ -238,12 +238,15 @@
 
 .second-mech-info {
   display: grid;
-  grid-template-columns: 1fr 3fr;
-  margin-bottom: 5%;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 10%;
+  margin-left: 20%;
+  gap: 10px;
+  width: 115%;
 }
 
-.second-mech-info > :first-child {
-  margin-left: -10%;
+.second-mech-info img {
+  margin-left: 0%;
 }
 
 .delayed {
@@ -282,10 +285,6 @@
 
 .left-description {
   width: 500px;
-}
-
-.right-image {
-  
 }
 
 .move-left {

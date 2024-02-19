@@ -213,49 +213,50 @@ export const animeDetailsData: { [key: string]: AnimeDetails } = {
         "mech3": "assets/images/vanagandr.png"
     },
     gifs: {
-      "mech1-weapon1-gif": "assets/gifs/evangelion/unit-00-sniper.gif",
-      "mech1-weapon2-gif": "assets/gifs/evangelion/unit-00-knife.JPG",
-      "mech1-weapon3-gif": "assets/gifs/evangelion/unit-00-spear.gif",
-      "mech1-weapon4-gif": "assets/gifs/evangelion/unit-00-bomb.gif",
-      "mech2-weapon1-gif": "assets/gifs/evangelion/unit-01-rifle.gif",
-      "mech2-weapon2-gif": "assets/gifs/evangelion/unit-01-knife.gif",
-      "mech2-weapon3-gif": "assets/gifs/evangelion/unit-01-sniper.gif",
-      "mech2-weapon4-gif": "assets/gifs/evangelion/unit-01-gatling-gun.gif",
+      "mech1-weapon1-gif": "assets/gifs/86/juggernaut-cannon.gif",
+      "mech1-weapon2-gif": "assets/gifs/86/juggernaut-blades.gif",
+      "mech1-weapon3-gif": "assets/gifs/86/juggernaut-wires.PNG",
+      "mech1-weapon4-gif": "assets/gifs/86/juggernaut-guns.PNG",
+      "mech2-weapon1-gif": "assets/gifs/86/reginleif-cannon.gif",
+      "mech2-weapon2-gif": "assets/gifs/86/reginleif-blades.gif",
+      "mech2-weapon3-gif": "assets/gifs/86/reginleif-wires.gif",
+      "mech2-weapon4-gif": "assets/gifs/86/reginleif-guns.PNG",
       "mech2-weapon5-gif": "",
-      "mech3-weapon1-gif": "assets/gifs/evangelion/unit-02-rifle.gif",
-      "mech3-weapon2-gif": "assets/gifs/evangelion/unit-02-knife.gif",
-      "mech3-weapon3-gif": "assets/gifs/evangelion/unit-02-crossbow.gif",
-      "mech3-weapon4-gif": "assets/gifs/evangelion/unit-02-needle.gif"
+      "mech3-weapon1-gif": "assets/gifs/86/vanagandr-cannon.jpg",
+      "mech3-weapon2-gif": "assets/gifs/86/vanagandr-guns.PNG",
+      "mech3-weapon3-gif": "assets/gifs/86/vanagandr-optic.PNG",
+      "mech3-weapon4-gif": "assets/gifs/86/vanagandr-system.PNG"
     },
     text: {
-      "mech1Name": "Evangelion Unit-00",
-      "mech1Pilot": "Rei Ayanami",
-      "mech1Description": "Evangelion Unit-00 is the first functional Evangelion unit created, serving as the prototype for the rest of the Evangelion series.",
-      "mech1weapon1": "Sniper Rifle",
-      "mech1weapon2": "Progressive Knife",
-      "mech1weapon3": "Spear of Longinus",
-      "mech1weapon4": "N² Bomb",
+      "mech1Name": "M1A4 Juggernaut",
+      "mech1Pilot": "The Eighty-Six",
+      "mech1Description": "The Juggernauts were manufactured as the Republic of San Magnolia's answer to the Giadian Empire's Legion. The quadrupedal \
+        mech was classified as an unmanned vehicle, as San Magnolia did not recognize the Eighty-Six as humans. As such, the Juggernaut provided \
+        minimal protection for the pilot, and were inferior to the Giadian Empire's designs in nearly every way. Its high mobility makes it suitable \
+        for hit-and-run tactics.",
+      "mech1weapon1": "57mm Smoothbore Gun",
+      "mech1weapon2": "High-Frequency Blades",
+      "mech1weapon3": "Wire Anchors",
+      "mech1weapon4": "12.7mm Heavy Machine Guns",
 
-      "mech2Name": "Evangelion Unit-01",
-      "mech2Pilot": "Shinji Ikari",
-      "mech2Description" : "Unit-01 stands out from the other units as it frequently acts independently, \
-        without the instructions of a pilot and without any apparent power source. Unit-01 will also take \
-        action to protect its pilot while sometimes servicing other interests.",
-      "mech2weapon1": "Pallet Rifle",
-      "mech2weapon2": "Progressive Knife",
-      "mech2weapon3": "Positron Sniper Rifle",
-      "mech2weapon4": "440mm Gatling Gun",
+      "mech2Name": "XM2 Reginleif",
+      "mech2Pilot": "The Eighty-Sixth Strike Package",
+      "mech2Description" : "The Reginleif is a third-generation Feldreß designed by the Federal Republic of Giad. Its design was \
+        inspired by the M1A4 Juggernaut, though it has several upgrades such as increased armor, greater mobility, and stronger weapons.",
+      "mech2weapon1": "88mm Smoothbore Gun",
+      "mech2weapon2": "High-Frequency Blades",
+      "mech2weapon3": "Wire Anchors",
+      "mech2weapon4": "12.7mm Heavy Machine Guns",
       "mech2weapon5": "",
 
-      "mech3Name": "Evangelion Unit-02",
-      "mech3Pilot": "Asuka Sohryu",
-      "mech3Description" : "The design of Unit-02 supposedly rectifies the mistakes made during the \
-        construction of Prototype Unit-00 and Test Type Unit-01, making it the first Evangelion built \
-        specifically for combat against the Angels.",
-      "mech3weapon1": "Positron Rifle",
-      "mech3weapon2": "Progressive Knife",
-      "mech3weapon3": "Electromagnetic Crossbow",
-      "mech3weapon4": "Needle Launcher"
+      "mech3Name": "M4A3 Vánagandr",
+      "mech3Pilot": "Federation Pilots",
+      "mech3Description" : "Making up the backbone of the Federal Republic of Giad's army, third-generation Vánagandr is much more \
+        sluggish than the Juggernaut and Reginlief. This is due to its heavy composite armor. It requires a driver and a gunner to operate.",
+      "mech3weapon1": "120mm Smoothbore Gun",
+      "mech3weapon2": "12.7mm Heavy Machine Guns",
+      "mech3weapon3": "Optical Sensor Unit",
+      "mech3weapon4": "Electro-Optical Active Protection System"
     }
   }
 };
