@@ -258,5 +258,69 @@ export const animeDetailsData: { [key: string]: AnimeDetails } = {
       "mech3weapon3": "Optical Sensor Unit",
       "mech3weapon4": "Electro-Optical Active Protection System"
     }
-  }
+  },
+  "2581": {
+    malId: 2581,
+    mechOverview: "Gundams are used by the organization known as Celestial Being, who intend on taking on the entire world themselves. \
+      The Gundams are far superior to other mechs since they are equipped with advanced technology that is a century ahead of its time. \
+      GN Drives, mounted in the center of every Gundam, grant them almost a limitless supply of energy. These particles provide extreme \
+      mobility and are utlized for beam weaponry.",
+    video: {
+        "video1": "assets/videos/gundam00.mp4"
+    },
+    mechLabel: "Gundam",
+    images: {
+        "logo": "assets/images/gundam00logo.png",
+        "mech1": "assets/images/exia.png",
+        "mech2": "assets/images/reginleif.png",
+        "mech3": "assets/images/vanagandr.png"
+    },
+    gifs: {
+      "mech1-weapon1-gif": "assets/gifs/gundam-00/exia-blades.gif",
+      "mech1-weapon2-gif": "assets/gifs/gundam-00/exia-daggers.gif",
+      "mech1-weapon3-gif": "assets/gifs/gundam-00/exia-gun.gif",
+      "mech1-weapon4-gif": "assets/gifs/gundam-00/exia-trans-am.gif",
+      "mech2-weapon1-gif": "assets/gifs/86/reginleif-cannon.gif",
+      "mech2-weapon2-gif": "assets/gifs/86/reginleif-blades.gif",
+      "mech2-weapon3-gif": "assets/gifs/86/reginleif-wires.gif",
+      "mech2-weapon4-gif": "assets/gifs/86/reginleif-guns.PNG",
+      "mech2-weapon5-gif": "",
+      "mech3-weapon1-gif": "assets/gifs/86/vanagandr-cannon.jpg",
+      "mech3-weapon2-gif": "assets/gifs/86/vanagandr-guns.PNG",
+      "mech3-weapon3-gif": "assets/gifs/86/vanagandr-optic.PNG",
+      "mech3-weapon4-gif": "assets/gifs/86/vanagandr-system.PNG"
+    },
+    text: {
+      "mech1Name": "GN-001 Gundam Exia",
+      "mech1Pilot": "Setsuna F. Seiei",
+      "mech1Description": "The Exia is the Gundam specializing in close combat. It has the most complex frame out of the Gundams, \
+        as it needs to closely match the articulations of the human body. This causes some joints to be unprotected, causing its \
+        defensive capabilities to be somewhat limited. However, this design allows Exia to have the greatest mobility of the Gundams. \
+        Exia is also able to activate its Trans-Am System to release all of its accumulated GN particles. This boosts Exia's output by three times, gives \
+        Exia a red sheen, and causes afterimages to appear.",
+      "mech1weapon1": "GN Sword",
+      "mech1weapon2": "GN Beam Dagger",
+      "mech1weapon3": "GN Beam Gun",
+      "mech1weapon4": "Trans-Am System",
+
+      "mech2Name": "XM2 Reginleif",
+      "mech2Pilot": "The Eighty-Sixth Strike Package",
+      "mech2Description" : "The Reginleif is a third-generation Feldreß designed by the Federal Republic of Giad. Its design was \
+        inspired by the M1A4 Juggernaut, though it has several upgrades such as increased armor, greater mobility, and stronger weapons.",
+      "mech2weapon1": "88mm Smoothbore Gun",
+      "mech2weapon2": "High-Frequency Blades",
+      "mech2weapon3": "Wire Anchors",
+      "mech2weapon4": "12.7mm Heavy Machine Guns",
+      "mech2weapon5": "",
+
+      "mech3Name": "M4A3 Vánagandr",
+      "mech3Pilot": "Federation Pilots",
+      "mech3Description" : "Making up the backbone of the Federal Republic of Giad's army, third-generation Vánagandr is much more \
+        sluggish than the Juggernaut and Reginlief. This is due to its heavy composite armor. It requires a driver and a gunner to operate.",
+      "mech3weapon1": "120mm Smoothbore Gun",
+      "mech3weapon2": "12.7mm Heavy Machine Guns",
+      "mech3weapon3": "Optical Sensor Unit",
+      "mech3weapon4": "Electro-Optical Active Protection System"
+    }
+  },
 };
