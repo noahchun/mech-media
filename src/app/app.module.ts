@@ -10,6 +10,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { AnimeService } from './anime.service';
+import { ContactComponent } from './contact/contact.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, title: 'Home Page' },
@@ -22,11 +23,15 @@ const routes: Routes = [
     AppComponent,
     HomeComponent,
     DetailsComponent,
+    ContactComponent,
   ],
   // for modules
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes),
+    RouterModule.forRoot([
+      { path: 'contact', component: ContactComponent },
+      { path: 'details/:id', component: DetailsComponent}
+    ]),
     CommonModule,
     HttpClientModule,
   ],

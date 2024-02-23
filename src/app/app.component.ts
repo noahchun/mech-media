@@ -18,16 +18,18 @@ import * as AOS from 'aos';
   ],
   template: `
   <main>
-  <a [routerLink]="['/']">
     <div class="header">
-      <img class="brand-logo" src="/assets/images/placeholder-logo.png" alt="logo" aria-hidden="true">
+      <a [routerLink]="['/']">
+        <img class="brand-logo" src="/assets/images/placeholder-logo.png" alt="logo" aria-hidden="true">
+      </a>
       <div class="header-options">
         <ul>
-          <li><a href="#">Contact</a></li>
+          <li>
+            <a [routerLink]="['/contact']">Contact</a>
+          </li>
         </ul>
       </div>
     </div>
-  </a>
   <div class="image-container">
     <div class="scrolling-content">
       <section class="content">

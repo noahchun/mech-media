@@ -1,0 +1,74 @@
+.contact-details {
+    font-family: 'Poppins';
+}
+
+.parent {
+    font-family: 'Poppins';
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 35%;
+    border-radius: 20px;
+}
+    
+.div1 { 
+    grid-area: 1 / 1 / 2 / 6; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    font-size: 36px;
+}
+
+.div2 { 
+    grid-area: 2 / 1 / 4 / 3; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10%;
+    margin-top: -20%;
+}
+
+.div3 { 
+    grid-area: 2 / 3 / 4 / 6; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -20%;
+    margin-right: 10%;
+    font-size: 24px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-in, transform 1s ease-in;
+    margin-bottom: 10%;
+}
+
+.fade-in.appear {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.from-bottom {
+    transform: translateY(30%);
+}
+
+.headshot {
+    width: 300px;
+    height: 500px;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../../assets/fonts/poppins-regular.otf') format('opentype');
+}
